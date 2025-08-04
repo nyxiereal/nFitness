@@ -28,7 +28,13 @@ alt="Get it on Obtainium" align="center" height="54" /></a>
 I built this app after I found the official eFitness app to be too bloated and not user-friendly. I wanted a simple, open-source alternative that adheres to the Material Design guidelines and provides a faster experience. After 3 days of PCAPDroid-ing the official app, recreating requests in Python, and eventually building the entire app in Flutter. The app is **really** fast, practical, and easy to use. It has most of the features that I can test. I plan on updating it once issues arise or new features are requested/implemented into the official app.
 
 ## Screenshots
-soon™
+<details>
+   <summary>Click to reveal!</summary>
+   ![1](images/1.png)
+   ![2](images/2.png)
+   ![3](images/3.png)
+   ![4](images/4.png)
+</details>
 
 ## Installation & usage
 > [!NOTE]
