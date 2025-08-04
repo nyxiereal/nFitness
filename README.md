@@ -30,10 +30,10 @@ I built this app after I found the official eFitness app to be too bloated and n
 ## Screenshots
 <details>
    <summary>Click to reveal!</summary>
-   ![1](images/1.png)
-   ![2](images/2.png)
-   ![3](images/3.png)
-   ![4](images/4.png)
+    <img width="1440" height="3200" alt="image" src="https://github.com/user-attachments/assets/6612674a-d5da-4698-9614-6da0f42d0cd7" />
+<img width="1440" height="3200" alt="image" src="https://github.com/user-attachments/assets/10a439e5-17e1-403c-958c-ba90e28cf359" />
+<img width="1440" height="3200" alt="image" src="https://github.com/user-attachments/assets/8affa1a4-59f8-4447-886f-f6bd6f8bba2b" />
+<img width="1440" height="3200" alt="image" src="https://github.com/user-attachments/assets/80814d6b-0e4f-455c-b527-a8b32a993b60" />
 </details>
 
 ## Installation & usage
