@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class EfitnessService {
   static const _baseUrl = 'https://api-frontend2.efitness.com.pl/api';
   static const _appInfoUrl =
-      'https://raw.githubusercontent.com/nyxiereal/nFitness/master/appinfo.json';
+      'https://codeberg.org/nxr/nfitness/raw/branch/main/appinfo.json';
 
   static Map<String, dynamic>? _cachedAppInfo;
   static bool _isFetchingAppInfo = false;
