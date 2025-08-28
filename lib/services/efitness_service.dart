@@ -51,7 +51,7 @@ class EfitnessService {
     // Fetch new app info
     try {
       if (kDebugMode) {
-        print('📱 Fetching app info from GitHub...');
+        print('📱 Fetching app info from Codeberg...');
       }
       final response = await http.get(Uri.parse(_appInfoUrl));
 

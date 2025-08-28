@@ -147,7 +147,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       Switch(
                         value: _woke,
                         onChanged: (v) => _setWoke(v),
-                        activeColor: Theme.of(context).colorScheme.primary,
+                        activeThumbColor: Theme.of(context).colorScheme.primary,
                       ),
                       const SizedBox(width: 8),
                       const Text('Enable gender switching'),
@@ -156,7 +156,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const SizedBox(height: 16),
                   if (_woke)
                     DropdownButtonFormField<int>(
-                      value: _gender,
+                      initialValue: _gender,
                       decoration: const InputDecoration(
                         labelText: 'Gender changer (client-side)',
                         border: OutlineInputBorder(),
@@ -193,12 +193,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ListTile(
                     leading: const Icon(Icons.code),
-                    title: const Text('GitHub'),
-                    subtitle: const Text('nyxiereal/nFitness'),
+                    title: const Text('Codeberg'),
+                    subtitle: const Text('nxr/nfitness'),
                     contentPadding: EdgeInsets.zero,
                     onTap: () {
                       launchUrl(
-                        Uri.parse('https://github.com/nyxiereal/nFitness'),
+                        Uri.parse('https://codeberg.org/nxr/nfitness'),
                       );
                     },
                   ),

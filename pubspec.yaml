@@ -23,6 +23,7 @@ dependencies:
   qr_flutter: ^4.1.0
   shared_preferences: ^2.5.3
   url_launcher: ^6.3.2
+  xml: ^6.6.1
 
 dev_dependencies:
   flutter_test:
