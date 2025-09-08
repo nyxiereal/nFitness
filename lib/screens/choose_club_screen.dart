@@ -100,8 +100,11 @@ class _ChooseClubScreenState extends State<ChooseClubScreen> {
       'loginTime',
       DateTime.now().millisecondsSinceEpoch ~/ 1000,
     );
+<<<<<<< HEAD
     await prefs.setString('savedEmail', result['email']!);
     await prefs.setString('savedPassword', result['password']!);
+=======
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
 
     Navigator.pushAndRemoveUntil(
       context,

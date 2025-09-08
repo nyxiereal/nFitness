@@ -147,7 +147,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       Switch(
                         value: _woke,
                         onChanged: (v) => _setWoke(v),
+<<<<<<< HEAD
                         activeThumbColor: Theme.of(context).colorScheme.primary,
+=======
+                        activeColor: Theme.of(context).colorScheme.primary,
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
                       ),
                       const SizedBox(width: 8),
                       const Text('Enable gender switching'),
@@ -156,7 +160,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const SizedBox(height: 16),
                   if (_woke)
                     DropdownButtonFormField<int>(
+<<<<<<< HEAD
                       initialValue: _gender,
+=======
+                      value: _gender,
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
                       decoration: const InputDecoration(
                         labelText: 'Gender changer (client-side)',
                         border: OutlineInputBorder(),
@@ -193,12 +201,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ListTile(
                     leading: const Icon(Icons.code),
+<<<<<<< HEAD
                     title: const Text('Codeberg'),
                     subtitle: const Text('nxr/nfitness'),
                     contentPadding: EdgeInsets.zero,
                     onTap: () {
                       launchUrl(
                         Uri.parse('https://codeberg.org/nxr/nfitness'),
+=======
+                    title: const Text('GitHub'),
+                    subtitle: const Text('nyxiereal/nFitness'),
+                    contentPadding: EdgeInsets.zero,
+                    onTap: () {
+                      launchUrl(
+                        Uri.parse('https://github.com/nyxiereal/nFitness'),
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
                       );
                     },
                   ),

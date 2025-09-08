@@ -5,17 +5,24 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class EfitnessService {
   static const _baseUrl = 'https://api-frontend2.efitness.com.pl/api';
+<<<<<<< HEAD
   static const _appInfoUrl =
       'https://codeberg.org/nxr/nfitness/raw/branch/main/appinfo.json';
 
   static Map<String, dynamic>? _cachedAppInfo;
   static bool _isFetchingAppInfo = false;
+=======
+  static const _appInfoUrl = 'https://raw.githubusercontent.com/nyxiereal/nFitness/main/appinfo.json';
+  
+  static Map<String, dynamic>? _cachedAppInfo;
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
 
   Future<Map<String, dynamic>> _getAppInfo() async {
     if (_cachedAppInfo != null) {
       return _cachedAppInfo!;
     }
 
+<<<<<<< HEAD
     // Prevent multiple simultaneous requests
     if (_isFetchingAppInfo) {
       // Wait for the ongoing request to complete
@@ -27,6 +34,8 @@ class EfitnessService {
       }
     }
 
+=======
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
     final prefs = await SharedPreferences.getInstance();
     final cachedJson = prefs.getString('cached_appinfo');
     final cacheTime = prefs.getInt('appinfo_cache_time');
@@ -38,14 +47,19 @@ class EfitnessService {
       if (ageInHours < 24) {
         _cachedAppInfo = jsonDecode(cachedJson);
         if (kDebugMode) {
+<<<<<<< HEAD
           print(
             '📱 Using cached app info (age: ${ageInHours.toStringAsFixed(1)}h)',
           );
+=======
+          print('📱 Using cached app info (age: ${ageInHours.toStringAsFixed(1)}h)');
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
         }
         return _cachedAppInfo!;
       }
     }
 
+<<<<<<< HEAD
     _isFetchingAppInfo = true;
 
     // Fetch new app info
@@ -62,6 +76,22 @@ class EfitnessService {
         await prefs.setString('cached_appinfo', response.body);
         await prefs.setInt('appinfo_cache_time', currentTime);
 
+=======
+    // Fetch new app info
+    try {
+      if (kDebugMode) {
+        print('📱 Fetching app info from GitHub...');
+      }
+      final response = await http.get(Uri.parse(_appInfoUrl));
+      
+      if (response.statusCode == 200) {
+        final appInfo = jsonDecode(response.body);
+        
+        // Save new data to cache
+        await prefs.setString('cached_appinfo', response.body);
+        await prefs.setInt('appinfo_cache_time', currentTime);
+        
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
         _cachedAppInfo = appInfo;
         if (kDebugMode) {
           print('✅ App info fetched and cached successfully');
@@ -74,7 +104,11 @@ class EfitnessService {
       if (kDebugMode) {
         print('❌ Failed to fetch app info: $e');
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
       // If GitHub is down, but cached data is available, use it
       if (cachedJson != null) {
         _cachedAppInfo = jsonDecode(cachedJson);
@@ -83,17 +117,26 @@ class EfitnessService {
         }
         return _cachedAppInfo!;
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
       // In case github is not reachable or no cache is available, return hardcoded values that work on 8/08/2025
       // This should not happen, but better be safe than sorry
       return {
         'okhttp-version': '4.9.2',
         'efitness-version': '3.3.18',
         'superadmin-username': 'superAdmin',
+<<<<<<< HEAD
         'superadmin-password': 'Da8nLy?Db>k>AQ*D',
       };
     } finally {
       _isFetchingAppInfo = false;
+=======
+        'superadmin-password': 'Da8nLy?Db>k>AQ*D'
+      };
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
     }
   }
 
@@ -140,7 +183,11 @@ class EfitnessService {
     final appInfo = await _getAppInfo();
     final okhttpVersion = appInfo['okhttp-version'] ?? '4.9.2';
     final eFitnessVersion = appInfo['efitness-version'] ?? '3.3.18';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
     final headers = <String, String>{
       'Accept': 'application/json',
       'login-source': '2',
@@ -191,6 +238,7 @@ class EfitnessService {
     bool returnBool = false,
   }) async {
     if (refreshTokenIfNeeded && !await this.refreshTokenIfNeeded()) {
+<<<<<<< HEAD
       // Try automatic re-login if token refresh fails
       if (!await attemptAutoRelogin()) {
         if (kDebugMode) {
@@ -198,6 +246,12 @@ class EfitnessService {
         }
         return returnBool ? false as T : null;
       }
+=======
+      if (kDebugMode) {
+        print('❌ Token refresh failed for request');
+      }
+      return returnBool ? false as T : null;
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
     }
 
     final headers = await _buildHeaders(
@@ -260,6 +314,7 @@ class EfitnessService {
     return returnBool ? false as T : null;
   }
 
+<<<<<<< HEAD
   Future<bool> attemptAutoRelogin() async {
     if (kDebugMode) {
       print('🔄 Attempting automatic re-login...');
@@ -307,6 +362,8 @@ class EfitnessService {
     return true;
   }
 
+=======
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
   Future<bool> refreshTokenIfNeeded() async {
     if (kDebugMode) {
       print('🔄 Checking if token refresh is needed...');
@@ -417,8 +474,12 @@ class EfitnessService {
 
     final appInfo = await _getAppInfo();
     final superAdminLogin = appInfo['superadmin-username'] ?? 'superAdmin';
+<<<<<<< HEAD
     final superAdminPassword =
         appInfo['superadmin-password'] ?? 'Da8nLy?Db>k>AQ*D';
+=======
+    final superAdminPassword = appInfo['superadmin-password'] ?? 'Da8nLy?Db>k>AQ*D';
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
 
     final result = await _makeRequest<Map<String, dynamic>>(
       method: 'POST',
@@ -918,4 +979,8 @@ class EfitnessService {
       },
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
