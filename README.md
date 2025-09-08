@@ -1,15 +1,6 @@
 # nFitness
 An alternative to the official eFitness app, built with Flutter and Dart.
 
-<<<<<<< HEAD
-<a href="https://codeberg.org/nxr/nfitness/releases">
-    <img alt="Get it on Codeberg" src="https://get-it-on.codeberg.org/get-it-on-white-on-black.png" height="54">
-</a>
-
-<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/nyxiereal/nFitness/">
-<img src="https://github.com/ImranR98/Obtainium/raw/main/assets/graphics/badge_obtainium.png"
-alt="Get it on Obtainium" height="54" /></a>
-=======
 <a href="https://github.com/nyxiereal/nFitness/releases">
 <img src="https://user-images.githubusercontent.com/69304392/148696068-0cfea65d-b18f-4685-82b5-329a330b1c0d.png"
 alt="Download from GitHub releases" align="center" height="80" /></a>
@@ -17,7 +8,6 @@ alt="Download from GitHub releases" align="center" height="80" /></a>
 <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/nyxiereal/nFitness/">
 <img src="https://github.com/ImranR98/Obtainium/raw/main/assets/graphics/badge_obtainium.png"
 alt="Get it on Obtainium" align="center" height="54" /></a>
->>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
 
 ## Feature comparison
 | Feature                                 | eFitness | nFitness |
@@ -40,17 +30,10 @@ I built this app after I found the official eFitness app to be too bloated and n
 ## Screenshots
 <details>
    <summary>Click to reveal!</summary>
-<<<<<<< HEAD
-   <img src="https://codeberg.org/nxr/nfitness/raw/branch/main/.codeberg/1.webp" />
-   <img src="https://codeberg.org/nxr/nfitness/raw/branch/main/.codeberg/2.webp" />
-   <img src="https://codeberg.org/nxr/nfitness/raw/branch/main/.codeberg/3.webp" />
-   <img src="https://codeberg.org/nxr/nfitness/raw/branch/main/.codeberg/4.webp" />
-=======
     <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/6612674a-d5da-4698-9614-6da0f42d0cd7" />
 <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/10a439e5-17e1-403c-958c-ba90e28cf359" />
 <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/8affa1a4-59f8-4447-886f-f6bd6f8bba2b" />
 <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/80814d6b-0e4f-455c-b527-a8b32a993b60" />
->>>>>>> 7b2c520f4fcf6ed22aee5ebbc62b1dbe212acb80
 </details>
 
 ## Installation & usage

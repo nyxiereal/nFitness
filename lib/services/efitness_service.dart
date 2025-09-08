@@ -7,7 +7,7 @@ class EfitnessService {
   static const _baseUrl = 'https://api-frontend2.efitness.com.pl/api';
 <<<<<<< HEAD
   static const _appInfoUrl =
-      'https://codeberg.org/nxr/nfitness/raw/branch/main/appinfo.json';
+      'https://raw.githubusercontent.com/nyxiereal/nFitness/master/appinfo.json';
 
   static Map<String, dynamic>? _cachedAppInfo;
   static bool _isFetchingAppInfo = false;
